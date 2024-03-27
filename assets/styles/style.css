@@ -1,0 +1,168 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Icons */
+.icon-star {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/icon-star.svg");
+    background-repeat: no-repeat;
+}
+
+.icon-question {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/icon-plus.svg");
+    background-repeat: no-repeat;
+}
+
+.icon-question.active {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/icon-minus.svg");
+    background-repeat: no-repeat;
+}
+
+/* General */
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: hsl(275, 100%, 97%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header > img {
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    /* position: absolute;
+    top: 150px; */
+
+    max-width: 300px;
+    margin: -90px 0 50px 0;
+    border-radius: 20px;
+
+    background-color: hsl(0, 0%, 100%);
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px 20px;
+
+    padding: 20px;
+}
+
+.faqs-container > h1 {
+    color: hsl(292, 42%, 14%);
+}
+
+
+.faq-container {
+    padding: 0 20px;
+}
+
+.hr {
+    width: 100%;
+    margin: 30px 0;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.accordion {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.accordion > button {
+    cursor: pointer;
+    width: 85%;
+    border: none;
+    background-color:hsl(0, 0%, 100%);
+
+    text-align: left;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color:hsl(292, 42%, 14%);
+}
+
+.accordion :hover {
+    color: hsl(281, 83%, 54%);
+}
+
+.answer {
+    display: none;
+    margin: 20px 0 20px 0;
+
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: hsl(292, 16%, 49%);
+}
+
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Landscape */
+@media screen and (min-width: 500px) {
+    body {
+        height: 100vh;
+    }
+    
+    header > img {
+        content: url("../images/background-pattern-desktop.svg");
+    }
+
+    .container {
+        max-width: 520px;
+        margin: -120px 30px 50px 30px;
+    }
+
+    .icon-star {
+        width: 35px;
+        height: 35px;
+    }
+
+    .faqs-container > h1 {
+        font-size: 3rem;
+    }
+
+    .faq-container {
+        padding: 0 40px;
+    }
+
+    .accordion > button {
+        width: 85%;
+    }
+}
